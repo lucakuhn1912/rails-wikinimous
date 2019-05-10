@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Today's Top Articles</h1>
+
+  <% @articles.each do |article| %>
+  <%= link_to article_path(article) do %>
+    <h2><%= article.title %></h2>
+  <% end %>
+  <p><%= article.content %></p>
+    <%= link_to "Create Article", new_article_path %>
+
+  <% end %>
+</div>
